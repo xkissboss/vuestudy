@@ -1,1 +1,1 @@
-# vuestudyss
+# vuestudy
