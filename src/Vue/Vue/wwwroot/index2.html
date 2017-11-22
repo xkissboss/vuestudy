@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/js/vue.js"></script>
+</head>
+<body>
+    <div id="example-5">
+        <select v-model="selected">
+            <option disabled value="">请选择</option>
+            <option value="4444">A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+    <div id="example">
+        <my-component></my-component>
+    </div>
+    <script>
+
+        var a = new Vue({
+            el: '#example-5',
+            data: {
+                selected: ''
+            }
+        })
+        // 注册
+        Vue.component('my-component', {
+            template: '<div>A custom component!</div>'
+        })
+        // 创建根实例
+        new Vue({
+            el: '#example'
+        })
+    </script>
+</body>
+</html>
